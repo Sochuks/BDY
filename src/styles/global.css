@@ -2,3 +2,74 @@
 /* Preline UI */
 @import "preline/variants.css";
 @source "../../node_modules/preline/dist/*.js";
+
+@layer base{
+    :root {
+        /* Primary Colors */
+        --color-primary-blue: #1A365D;
+        --color-primary-gold: #D4AF37;
+
+        /* Secondary */
+        --color-gray-light: #F5F5F5;
+        --color-gray-medium: #E0E0E0;
+        --color-gray-dark: #333333;
+
+        /* Accent */
+        --color-accent-green: #4CAF50;
+        --color-accent-red: #E53935;
+
+        /* Typography */
+        --font-heading: 'Playfair Display', serif;
+        --font-body: 'Lato', sans-serif;
+
+        /* Responsive Typography */
+        --text-h1: clamp(2rem, 5vw, 3rem);
+        --text-h2: clamp(1.5rem, 4vw, 2.5rem);
+        --text-h3: clamp(1.25rem, 3vw, 1.75rem);
+        --text-body: clamp(1rem, 1.1vw, 1.1rem);
+    }
+
+    /* Apply font families */
+    html {
+        font-family: var(--font-body);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: 700;
+    }
+    /* Apply Responsive typography */
+    h1 {
+        font-size: var(--text-h1);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: var(--text-h2);
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: var(--text-h3);
+        line-height: 1.4;
+    }
+
+    body {
+        font-size: var(--text-body);
+        line-height: 1.6;
+        color: var(--color-gray-dark);
+    }
+
+    /* Create Tailwind utilities for colors */
+  .text-primary-blue { color: var(--color-primary-blue); }
+  .bg-primary-blue { background-color: var(--color-primary-blue); }
+  .text-primary-gold { color: var(--color-primary-gold); }
+  .bg-primary-gold { background-color: var(--color-primary-gold); }
+  .text-gray-light { color: var(--color-gray-light); }
+  .bg-gray-light { background-color: var(--color-gray-light); }
+  .border-gray-medium { border-color: var(--color-gray-medium); }
+  .text-gray-dark { color: var(--color-gray-dark); }
+  .bg-accent-green { background-color: var(--color-accent-green); }
+  .bg-accent-red { background-color: var(--color-accent-red); }
+
+}
