@@ -62,9 +62,15 @@
 
     /* Create Tailwind utilities for colors */
   .text-primary-blue { color: var(--color-primary-blue); }
-  .bg-primary-blue { background-color: var(--color-primary-blue); }
+  .bg-primary-blue { 
+    background-color: var(--color-primary-blue);
+    &:hover { filter: brightness(0.9); } 
+    }
   .text-primary-gold { color: var(--color-primary-gold); }
-  .bg-primary-gold { background-color: var(--color-primary-gold); }
+  .bg-primary-gold { 
+    background-color: var(--color-primary-gold); 
+    &:hover { filter: brightness(0.9); }
+    }
   .text-gray-light { color: var(--color-gray-light); }
   .bg-gray-light { background-color: var(--color-gray-light); }
   .border-gray-medium { border-color: var(--color-gray-medium); }
