@@ -19,8 +19,9 @@
         --color-accent-red: #E53935;
 
         /* Typography */
-        --font-heading: 'Playfair Display', serif;
-        --font-body: 'Lato', sans-serif;
+        --font-heading: 'Manrope', Verdana, sans-serif;
+
+        --font-body: 'Open-sans', sans-serif;
 
         /* Responsive Typography */
         --text-h1: clamp(2rem, 5vw, 3rem);
