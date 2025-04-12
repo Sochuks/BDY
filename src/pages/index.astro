@@ -1,30 +1,68 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+import heroImage from "../assets/images/bdy-headshot.png";
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Home - Yusuf Djonga ESQ">
   <section
-    class="relative h-[80vh] flex items-center justify-center bg-primary-gold bg-[url('/hero.jpg')] bg-cover bg-center"
+    class="relative flex-1 pt-12 overflow-hidden bg-primary-blue bg-[url('/hero.jpg')] bg-cover bg-center"
   >
-    <div class="text-center text-gray-dark">
-      <h1 class="text-5xl font-bold">Welcome to Our Site</h1>
-      <p class="mt-4 text-lg">We build amazing things.</p>
+    <!-- Content Wrapper -->
+    <div class="relative mt-14 max-w-screen-xl mx-auto">
+      <!-- Flex Box -->
+      <div class="flex flex-col justify-between gap-4 md:flex-row px-4">
+        <!-- First column -->
+        <div class="flex items-center">
+          <div class="space-y-6">
+            <h1 class="text-4xl font-bold text-gray-light">
+              Were Launching Soon!
+            </h1>
+            <p class="text-primary-gold">
+              Yusuf Jonga, Esq. – Expert in Data Privacy, Tech Contracts, and
+              Digital Rights.
+            </p>
+            <button
+              class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              Notify Me
+            </button>
+          </div>
+        </div>
+        <!-- Second column -->
+        <div class="">
+          <div class="relative">
+            <!-- Border-Box -->
+            <div
+              class="border-box absolute top-8 h-[280px] md:top-26 w-full md:h-[350px] border-4 border-[var(--color-primary-gold)] z-10"
+            >
+            </div>
+            <img
+              src={heroImage.src}
+              alt="Lawyer"
+              class="relative w-full h-full object-cover z-20"
+            />
+            <div class="border-overlay bottom-8 md:bottom-[46px]"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Hero or header section -->
-  <section
-    class="relative overflow-hidden bg-primary-blue py-6 sm:py-10 md:py-8"
-  >
-    <!-- Grid container -->
-    <div
-      class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6 h-full mx-auto border border-amber-300 rounded-lg mt-14 md:mt-12"
-    >
-      <div class="col-span-2 bg-amber-600">01</div>
-      <div class="bg-accent-green w-full">09</div>
-    </div>
-  </section>
 </Layout>
+<style>
+  .border-overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid var(--color-primary-gold);
+    border-left: 4px solid var(--color-primary-gold);
+    border-right: 4px solid var(--color-primary-gold);
+    z-index: 30; /* In front of image */
+    background: transparent;
+  }
+</style>
