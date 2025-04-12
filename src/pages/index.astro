@@ -6,53 +6,25 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home - Yusuf Djonga ESQ">
-  <div class="image-wrapper">
-    <div class="border-box"></div>
-    <img
-      src="https://cdn.prod.website-files.com/6791f7832cfaaf33653a5120/6791f7832cfaaf33653a5325_Omar%20Ochoa%20Hero.webp"
-      alt="Lawyer"
-      class="main-image"
-    />
-    <div class="border-overlay"></div>
-  </div>
+  <section
+    class="relative h-[80vh] flex items-center justify-center bg-primary-gold bg-[url('/hero.jpg')] bg-cover bg-center"
+  >
+    <div class="text-center text-gray-dark">
+      <h1 class="text-5xl font-bold">Welcome to Our Site</h1>
+      <p class="mt-4 text-lg">We build amazing things.</p>
+    </div>
+  </section>
+
+  <!-- Hero or header section -->
+  <section
+    class="relative overflow-hidden bg-primary-blue py-6 sm:py-10 md:py-8"
+  >
+    <!-- Grid container -->
+    <div
+      class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6 h-full mx-auto border border-amber-300 rounded-lg mt-14 md:mt-12"
+    >
+      <div class="col-span-2 bg-amber-600">01</div>
+      <div class="bg-accent-green w-full">09</div>
+    </div>
+  </section>
 </Layout>
-<style>
-  .image-wrapper {
-    position: relative;
-    width: 400px;
-    height: 600px;
-    margin: 60px auto;
-  }
-
-  .border-box {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 100%;
-    height: 400px;
-    border: 6px solid gold;
-    z-index: 1; /* Behind image initially */
-  }
-
-  .main-image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2; /* In front of border */
-  }
-
-  /* Create illusion of border being in front at bottom */
-  .border-overlay {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 100%;
-    height: 80px;
-    border-bottom: 6px solid gold;
-    border-left: 6px solid gold;
-    border-right: 6px solid gold;
-    z-index: 3; /* In front of image */
-    background: transparent;
-  }
-</style>

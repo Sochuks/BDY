@@ -22,8 +22,16 @@ import Footer from "../layouts/Footer.astro";
     <title>{title}</title>
   </head>
   <body>
-    <Navbar />
-    <slot />
+    <!-- Navbar -->
+    <div class="relative z-50">
+      <Navbar />
+    </div>
+
+    <!-- Main content area -->
+    <main class="relative z-10">
+      <slot />
+    </main>
+
     <Footer />
   </body>
   <!-- Preline UI -->
