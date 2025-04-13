@@ -5,8 +5,9 @@ import heroImage from "../assets/images/bdy-headshot.png";
 import ServiceBlurb from "../components/ServiceBlurb.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Shopcards } from "../utils/db";
+
+console.log("actios", Shopcards);
 ---
 
 <Layout title="Home - Yusuf Djonga ESQ">
@@ -162,14 +163,13 @@ import ServiceCard from "../components/ServiceCard.astro";
   </section>
 
   <!-- Shop -->
-  <section>
+  <section class="px-4 sm:px-6 lg:px-8 py-20">
     <!-- Content Wrapper -->
     <div class="max-w-screen-xl mx-auto">
       <!-- Grid container -->
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
         <!-- Column 1 -->
-        <ServiceCard />
-        <ServiceCard />
+        {Shopcards.map((detail) => <ServiceCard item={detail} />)};
       </div>
     </div>
   </section>
