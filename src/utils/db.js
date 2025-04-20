@@ -2,13 +2,13 @@ export const Shopcards = [
     {
         id: 1,
         title:"The Contract Shop",
-        body: "Welcome to the contract shop",
+        body: "Pre-made, tech-focused contracts for effortless compliance and time-saving legal solutions.",
         image: "https://img.freepik.com/free-photo/close-up-business-document-laptop-desk_1098-1991.jpg?t=st=1744559323~exp=1744562923~hmac=8951406942169f850f37cafc46bd7693d3c15f5c3eac8b3c16fec307d8b52171&w=996",
     },
     {
     id: 2,
-    title:"Custom Legal",
-    body: "Welcome to Custom Legal",
+    title:"Custom Legal Service",
+    body: "Tailored strategies and agreements aligned with your business goals and risk tolerance.",
     image: "https://img.freepik.com/premium-photo/closeup-lawyer-signing-legal-documents-with-pen-courtroom_885831-95998.jpg?w=740",
 }
 ]

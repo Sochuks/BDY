@@ -29,39 +29,67 @@ import { Services } from "../utils/db";
         <div class="flex items-center">
           <div class="space-y-6">
             <h1 class="text-4xl md:mb-4 md:text-6xl/18 font-bold text-white">
-              Secure <span class="text-primary-blue">Your Future</span></span> <br />in a Digital World
+              Secure <span class="text-primary-blue">Your Future</span>
+              <br />in a Digital World
             </h1>
             <p class="text-lg md:text-2xl text-black">
               Expert in Data Privacy, Tech Contracts, &<br /> Digital Rights.
             </p>
-            
-          <!-- Buttons -->
-          <div class="mt-5 grid gap-3 sm:inline-flex">
-            <a class="py-3 px-4 flex items-center gap-x-2 text-lg font-medium rounded-lg border border-[var(--color-gray-light)] bg-primary-blue text-gray-200 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shrink-0 size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
-              </svg>
-              
-              Schedule Consultation
-            </a>
 
-            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-xl font-medium rounded-lg border border-transparent bg-transparent text-black hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shrink-0 size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-              </svg>            
-              (773) 825-9538
-            </a>
-          </div>
-          <!-- End Buttons -->
+            <!-- Buttons -->
+            <div class="mt-5 grid gap-3 flex-wrap sm:inline-flex">
+              <a
+                class="py-3 px-4 flex justify-center items-center gap-x-2 text-lg font-medium rounded-lg border border-[var(--color-gray-light)] bg-primary-blue text-gray-200 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="shrink-0 size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                  ></path>
+                </svg>
 
+                Schedule Consultation
+              </a>
+
+              <a
+                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-xl font-medium rounded-lg border border-transparent bg-transparent text-black hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                href="#"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="shrink-0 size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                  ></path>
+                </svg>
+                (773) 825-9538
+              </a>
+            </div>
+            <!-- End Buttons -->
           </div>
         </div>
         <!-- Second column -->
-        <div class="">
+        <div class="flex justify-center">
           <div class="relative md:w-[500px] md:h-[500px]">
             <!-- Border-Box -->
             <div
-              class="border-box overflow-hidden absolute top-8 h-[280px] md:top-26 w-full md:h-[350px] border-8 border-[var(--color-primary-gold)] z-10"
+              class="border-box overflow-hidden absolute bottom-0 lg:bottom-12 h-[280px] w-full md:h-[350px] border-8 border-[var(--color-primary-gold)] z-10"
             >
             </div>
             <img
@@ -69,7 +97,7 @@ import { Services } from "../utils/db";
               alt="Lawyer"
               class="relative w-full h-full object-cover z-20 animate-float"
             />
-            <div class="border-overlay bottom-8 md:bottom-[46px]"></div>
+            <div class="border-overlay bottom-0 lg:bottom-12"></div>
           </div>
         </div>
       </div>
@@ -81,65 +109,162 @@ import { Services } from "../utils/db";
     <!-- Content wrapper -->
     <div class="max-w-[1180px] mx-auto bg-gray-light -mt-20 shadow-md">
       <!-- flex box -->
-      <div class="flex flex-col justify-between items-center gap-4 py-16 px-10 md:flex-row">
+      <div
+        class="flex flex-col justify-between items-center gap-4 py-16 px-10 md:flex-row"
+      >
         <!-- left -->
-        <div class="w-full md:w-[60%] space-y-1 text-left">  
+        <div class="w-full md:w-[60%] space-y-1 text-left">
           <h4 class="text-gray-medium uppercase">Technology Attorney</h4>
           <h2 class="text-primary-blue">Yusuf Jonga, Esq.</h2>
-              <!-- Social Brands -->
-    <div class="mt-3 mb-8 space-x-2">
-      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-        </svg>        
-      </a>
-      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-        </svg>        
-      </a>
-      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-        </svg>        
-      </a>
-
-    </div>
-    <!-- End Social Brands -->        
+          <!-- Social Brands -->
+          <div class="mt-3 mb-8 space-x-2">
+            <a
+              class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              href="#"
+            >
+              <svg
+                class="size-8"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#1a365d"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                  ><g transform="scale(5.12,5.12)"
+                    ><path
+                      d="M12,23.403v-0.013v-13.001l-0.12,-0.089h-0.01l-2.73,-2.02c-1.67,-1.24 -4.05,-1.18 -5.53,0.28c-0.99,0.98 -1.61,2.34 -1.61,3.85v3.602zM38,23.39v0.013l10,-7.391v-3.602c0,-1.49 -0.6,-2.85 -1.58,-3.83c-1.46,-1.457 -3.765,-1.628 -5.424,-0.403l-2.876,2.123l-0.12,0.089zM14,24.868l10.406,7.692c0.353,0.261 0.836,0.261 1.189,0l10.405,-7.692v-13.001l-11,8.133l-11,-8.133zM38,25.889v15.111c0,0.552 0.448,1 1,1h6.5c1.381,0 2.5,-1.119 2.5,-2.5v-21.003zM12,25.889l-10,-7.392v21.003c0,1.381 1.119,2.5 2.5,2.5h6.5c0.552,0 1,-0.448 1,-1z"
+                    ></path></g
+                  ></g
+                >
+              </svg>
+            </a>
+            <a
+              class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              href="#"
+            >
+              <svg
+                class="size-8"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#1a365d"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                  ><g transform="scale(4,4)"
+                    ><path
+                      d="M23.77344,12c-10.918,0 -11.77344,0.85444 -11.77344,11.77344v16.45312c0,10.918 0.85544,11.77344 11.77344,11.77344h16.45312c10.918,0 11.77344,-0.85444 11.77344,-11.77344v-16.45312c0,-10.919 -0.85444,-11.77344 -11.77344,-11.77344zM21.16797,16h21.66406c4.793,0 5.16797,0.37497 5.16797,5.16797v21.66406c0,4.793 -0.37597,5.16797 -5.16797,5.16797h-21.66406c-4.793,0 -5.16797,-0.37597 -5.16797,-5.16797v-21.66406c0,-4.793 0.37497,-5.16797 5.16797,-5.16797zM22.50195,18.50391c-1.629,0 -2.94922,1.32027 -2.94922,2.94727c0,1.627 1.31922,2.94922 2.94922,2.94922c1.625,0 2.94531,-1.32122 2.94531,-2.94922c0,-1.625 -1.32031,-2.94727 -2.94531,-2.94727zM37.93359,26.32227c-2.46,0 -4.11016,1.34991 -4.78516,2.62891h-0.07031v-2.22266h-4.84961v16.27148h5.05273v-8.05078c0,-2.123 0.40611,-4.17773 3.03711,-4.17773c2.594,0 2.62695,2.42941 2.62695,4.31641v7.91211h5.05469v-8.92578c0,-4.382 -0.94541,-7.75195 -6.06641,-7.75195zM19.97266,26.72852v16.27148h5.05664v-16.27148z"
+                    ></path></g
+                  ></g
+                >
+              </svg>
+            </a>
+            <a
+              class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              href="#"
+            >
+              <svg
+                class="size-8"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#1a365d"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                  ><g transform="scale(5.12,5.12)"
+                    ><path
+                      d="M6.91992,6l14.2168,20.72656l-14.9082,17.27344h3.17773l13.13867,-15.22266l10.44141,15.22266h10.01367l-14.87695,-21.6875l14.08008,-16.3125h-3.17578l-12.31055,14.26172l-9.7832,-14.26172z"
+                    ></path></g
+                  ></g
+                >
+              </svg>
+            </a>
+          </div>
+          <!-- End Social Brands -->
           <p class="w-full md:w-[80%] text-gray-medium">
-            Yusuf Jonga is a seasoned lawyer and Senior Associate IV at Outsource Global, with a passion for navigating the intersection of law and technology. Specializing in Communications and Information Technology Law, Data Privacy, Security, and Emerging Technologies, he brings a forward-thinking approach to legal challenges in the digital age.
+            Yusuf Jonga is a seasoned lawyer and Senior Associate IV at
+            Outsource Global, with a passion for navigating the intersection of
+            law and technology. Specializing in Communications and Information
+            Technology Law, Data Privacy, Security, and Emerging Technologies,
+            he brings a forward-thinking approach to legal challenges in the
+            digital age.
           </p>
           <a href="#">Learn More</a>
         </div>
         <!-- Right -->
         <div class="w-full md:w-[40%] flex justify-center">
-            <!-- Image Grid -->
-            <div class="grid grid-cols-2 gap-4">
-              <img
-                src="https://images.credly.com/size/340x340/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png"
-                alt="Lawyer"
-                class="relative w-[150px] h-[150px] object-cover"
-              />            
-              <img
+          <!-- Image Grid -->
+          <div class="grid grid-cols-2 gap-4">
+            <img
+              src="https://images.credly.com/size/340x340/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png"
+              alt="Lawyer"
+              class="relative w-[150px] h-[150px] object-cover"
+            />
+            <img
               src="https://images.credly.com/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png"
               alt="Lawyer"
               class="relative w-[150px] h-[150px] object-cover"
-            />                        
-             <img
-            src="https://images.credly.com/size/340x340/images/5d5ac32b-d239-42b8-9665-8a921dc3ab47/image.png"
-            alt="Lawyer"
-            class="relative w-[150px] h-[150px] object-cover"
-          />            
-          <img
-          src="https://images.credly.com/size/340x340/images/fce226c2-0f13-4e17-b60c-24fa6ffd88cb/Intro2IoT.png"
-          alt="Lawyer"
-          class="relative w-[150px] h-[150px] object-cover"
-        />   
-            </div>
-            <!-- End Image Grid -->
-
+            />
+            <img
+              src="https://images.credly.com/size/340x340/images/5d5ac32b-d239-42b8-9665-8a921dc3ab47/image.png"
+              alt="Lawyer"
+              class="relative w-[150px] h-[150px] object-cover"
+            />
+            <img
+              src="https://images.credly.com/size/340x340/images/fce226c2-0f13-4e17-b60c-24fa6ffd88cb/Intro2IoT.png"
+              alt="Lawyer"
+              class="relative w-[150px] h-[150px] object-cover"
+            />
+          </div>
+          <!-- End Image Grid -->
         </div>
-
       </div>
     </div>
   </section>
@@ -147,14 +272,16 @@ import { Services } from "../utils/db";
   <!-- Services -->
   <section class="max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8 lg:py-40 mx-auto">
     <!-- Title -->
-    <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
+    <div class="mx-auto max-w-4xl mb-8 lg:mb-14 text-center">
       <h2
-        class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-neutral-200"
+        class="text-3xl lg:text-4xl text-primary-blue font-bold dark:text-neutral-200"
       >
-      Tailored Tech Law Solutions
+        Legal Expertise for Your Technology Ventures
       </h2>
-      <p class="mt-3 text-gray-800 dark:text-neutral-200">
-        The powerful and flexible theme for all kinds of businesses.
+      <p class="mt-3 text-gray-medium dark:text-neutral-200">
+        I specialize in providing tailored legal services for technology
+        matters. While I offer support on an individual basis, partnering with
+        me as your general counsel ensures maximum value.
       </p>
     </div>
     <!-- End Title -->
@@ -230,7 +357,7 @@ import { Services } from "../utils/db";
           <h3
             class="text-base font-semibold text-gray-dark uppercase mb-3 dark:text-neutral-500"
           >
-            Downoad free step by step guide
+            Get Free Resource
           </h3>
           <h1
             class="text-3xl text-gray-dark font-bold sm:text-5xl lg:text-5xl lg:leading-tight dark:text-neutral-800"
@@ -256,16 +383,16 @@ import { Services } from "../utils/db";
               <input
                 type="email"
                 id="hs-hero-email-1"
-                class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-sm sm:text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                 placeholder="Your email address"
               />
             </div>
             <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
               <a
-                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-sm border border-transparent bg-primary-blue text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                 href="#"
               >
-                Get started
+                Get Resource
               </a>
             </div>
           </div>
@@ -277,7 +404,11 @@ import { Services } from "../utils/db";
           class="hidden absolute top-2/4 start-0 transform -translate-y-2/4 -translate-x-40 md:block"
           aria-hidden="true"
         >
-  <img src={columnOne.src} class="animate-float" alt="greek-pillar-base" />
+          <img
+            src={columnOne.src}
+            class="animate-float"
+            alt="greek-pillar-base"
+          />
         </div>
         <!-- End SVG Element -->
 
@@ -286,8 +417,12 @@ import { Services } from "../utils/db";
           class="hidden absolute top-2/4 end-0 transform -translate-y-2/4 translate-x-40 md:block"
           aria-hidden="true"
         >
-        <img src={columnTwo.src} class="animate-float" alt="greek-pillar-base" />
-      </div>
+          <img
+            src={columnTwo.src}
+            class="animate-float"
+            alt="greek-pillar-base"
+          />
+        </div>
         <!-- End SVG Element -->
       </div>
     </div>
@@ -295,7 +430,7 @@ import { Services } from "../utils/db";
   <!-- End Subscribe -->
 
   <!-- Blog Section -->
-  <section class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+  <section class="px-4 py-10 sm:px-6 lg:px-8 lg:py-40">
     <!-- Card Blog -->
     <div class="max-w-[85rem] mx-auto">
       <!-- Title -->
@@ -453,50 +588,50 @@ import { Services } from "../utils/db";
     background: transparent;
   }
 
- /* Shiny line overlay effect */
-.border-box::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0.6) 50%,
-    rgba(255, 255, 255, 0) 70%
-  );
-  transform: rotate(0deg);
-  animation: shine 2.5s infinite ease-in-out;
-  z-index: 20;
-  pointer-events: none;
-  filter: blur(2px);
-}
+  /* Shiny line overlay effect */
+  .border-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: rotate(0deg);
+    animation: shine 2.5s infinite ease-in-out;
+    z-index: 20;
+    pointer-events: none;
+    filter: blur(2px);
+  }
 
-@keyframes shine {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(25deg);
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(25deg);
+    }
+    50% {
+      transform: translateX(100%) translateY(100%) rotate(25deg);
+    }
+    100% {
+      transform: translateX(200%) translateY(200%) rotate(25deg);
+    }
   }
-  50% {
-    transform: translateX(100%) translateY(100%) rotate(25deg);
-  }
-  100% {
-    transform: translateX(200%) translateY(200%) rotate(25deg);
-  }
-}
 
-@keyframes float {
-  0%, 100% {
-    transform: scale(1) translateY(0);
+  @keyframes float {
+    0%,
+    100% {
+      transform: scale(1) translateY(0);
+    }
+    50% {
+      transform: scale(1.02) translateY(-5px);
+    }
   }
-  50% {
-    transform: scale(1.02) translateY(-5px);
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
 </style>
