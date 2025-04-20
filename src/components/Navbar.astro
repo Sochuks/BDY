@@ -1,11 +1,13 @@
 <!-- ========== HEADER ========== -->
 <header
-  class="absolute top-0 left-0 flex flex-wrap py-2 md:pt-4 md:justify-start md:flex-nowrap z-50 w-full bg-transparent dark:bg-[var(--color-primary-blue)] dark:border-neutral-700"
+  id="navbar"
+  class="absolute top-0 left-0 flex flex-wrap py-2 md:pt-4 md:justify-start md:flex-nowrap z-50 w-full bg-transparent dark:bg-[var(--color-primary-blue)] dark:border-neutral-700 transition-all duration-300 ease-in-out"
 >
   <nav
     class="relative max-w-[85rem] w-full mx-auto flex items-center justify-between gap-3 py-2 px-4 sm:px-6 lg:px-8"
   >
     <a
+      id="logo"
       class="flex-none text-gray-light font-[Manrope] font-bold md:text-2xl focus:outline-hidden focus:opacity-80 dark:text-white"
       href="#"
       aria-label="Brand">Yusuf Djonga</a
@@ -14,7 +16,7 @@
     <div class="md:order-3 flex justify-end items-center gap-x-4">
       <!-- Contact Button -->
       <a
-        class="hidden py-3 px-6 sm:inline-flex items-center font-semibold text-base rounded-lg border-2 border-[var(--color-primary-gold)] bg-gray-100 text-primary-blue shadow-2xs hover:bg-[var(--color-primary-gold)] disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 focus:outline-hidden focus:bg-gray-100 dark:border-[var(--color-primary-gold)] dark:text-neutral-300 dark:hover:bg-[var(--color-primary-gold)] dark:focus:bg-neutral-700"
+        class="hidden py-3 px-6 sm:inline-flex items-center font-semibold text-base rounded-sm border-2 border-[var(--color-primary-gold)] bg-gray-light text-primary-gold shadow-2xs hover:text-white hover:bg-[var(--color-primary-gold)] disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 focus:outline-hidden focus:bg-gray-100 dark:border-[var(--color-primary-gold)] dark:text-neutral-300 dark:hover:bg-[var(--color-primary-gold)] dark:focus:bg-neutral-700"
         href="#"
       >
         Contact
@@ -68,7 +70,7 @@
     <!-- Collapse -->
     <div
       id="hs-header-base"
-      class="hs-overlay [--auto-close:md] hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-50 bg-gray-lights md:bg-transparent border-e basis-full grow md:order-2 md:static md:block md:h-auto md:max-w-none md:w-auto md:border-e-transparent md:transition-none md:translate-x-0 md:z-40 md:basis-auto dark:bg-neutral-800 dark:border-e-gray-700 md:dark:border-e-transparent hidden"
+      class="hs-overlay [--auto-close:md] hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-50 bg-gray-light md:bg-transparent border-e basis-full grow md:order-2 md:static md:block md:h-auto md:max-w-none md:w-auto md:border-e-transparent md:transition-none md:translate-x-0 md:z-40 md:basis-auto dark:bg-neutral-800 dark:border-e-gray-700 md:dark:border-e-transparent hidden"
       role="dialog"
       tabindex="-1"
       aria-label="Sidebar"
@@ -225,3 +227,22 @@
   </nav>
 </header>
 <!-- ========== END HEADER ========== -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.getElementById("navbar");
+    const brand = document.getElementById("logo");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        nav?.classList.remove("absolute");
+        nav?.classList.add("fixed", "top-0", "bg-white", "shadow-md");
+        brand?.classList.remove("text-gray-light");
+        brand?.classList.add("text-primary-blue");
+      } else {
+        nav?.classList.remove("fixed", "top-0", "bg-white", "shadow-md");
+        nav?.classList.add("absolute");
+        brand?.classList.remove("text-primary-blue");
+        brand?.classList.add("text-gray-dark");
+      }
+    });
+  });
+</script>
