@@ -1,47 +1,502 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import heroImage from "../assets/images/bdy-headshot.png";
+import columnOne from "../assets/images/column-1.png";
+import columnTwo from "../assets/images/column-2.png";
+import ServiceBlurb from "../components/ServiceBlurb.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+
+import { Shopcards } from "../utils/db";
+import { Services } from "../utils/db";
 ---
 
 <Layout title="Home - Yusuf Djonga ESQ">
-  <h1 class="bg-amber-400">Welcome to portfolio A</h1>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+  <section
+    class="relative flex-1 pt-12 overflow-hidden bg-primary-blue bg-[url('../assets/images/886.jpg')] bg-cover bg-center"
   >
-    Solid
-  </button>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 text-gray-500 hover:border-blue-600 hover:text-blue-600 focus:outline-hidden focus:border-blue-600 focus:text-blue-600 disabled:opacity-50 disabled:pointer-events-none dark:border-neutral-700 dark:text-neutral-400 dark:hover:text-blue-500 dark:hover:border-blue-600 dark:focus:text-blue-500 dark:focus:border-blue-600"
+    <!-- Overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-[#1A365D] via-[#cddcf1] to-white opacity-90 z-0"
+    >
+    </div>
+
+    <!-- Content Wrapper -->
+    <div class="relative mt-22 mb-20 max-w-screen-xl mx-auto">
+      <!-- Flex Box -->
+      <div class="flex flex-col justify-between gap-4 md:flex-row px-6">
+        <!-- First column -->
+        <div class="flex items-center">
+          <div class="space-y-6">
+            <h1 class="text-4xl md:mb-4 md:text-6xl/18 font-bold text-white">
+              Secure <span class="text-primary-blue">Your Future</span></span> <br />in a Digital World
+            </h1>
+            <p class="text-lg md:text-2xl text-black">
+              Expert in Data Privacy, Tech Contracts, &<br /> Digital Rights.
+            </p>
+            
+          <!-- Buttons -->
+          <div class="mt-5 grid gap-3 sm:inline-flex">
+            <a class="py-3 px-4 flex items-center gap-x-2 text-lg font-medium rounded-lg border border-[var(--color-gray-light)] bg-primary-blue text-gray-200 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shrink-0 size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+              </svg>
+              
+              Schedule Consultation
+            </a>
+
+            <a class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-xl font-medium rounded-lg border border-transparent bg-transparent text-black hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="shrink-0 size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+              </svg>            
+              (773) 825-9538
+            </a>
+          </div>
+          <!-- End Buttons -->
+
+          </div>
+        </div>
+        <!-- Second column -->
+        <div class="">
+          <div class="relative md:w-[500px] md:h-[500px]">
+            <!-- Border-Box -->
+            <div
+              class="border-box overflow-hidden absolute top-8 h-[280px] md:top-26 w-full md:h-[350px] border-8 border-[var(--color-primary-gold)] z-10"
+            >
+            </div>
+            <img
+              src={heroImage.src}
+              alt="Lawyer"
+              class="relative w-full h-full object-cover z-20 animate-float"
+            />
+            <div class="border-overlay bottom-8 md:bottom-[46px]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="relative bg-transparent">
+    <!-- Content wrapper -->
+    <div class="max-w-[1180px] mx-auto bg-gray-light -mt-20 shadow-md">
+      <!-- flex box -->
+      <div class="flex flex-col justify-between items-center gap-4 py-16 px-10 md:flex-row">
+        <!-- left -->
+        <div class="w-full md:w-[60%] space-y-1 text-left">  
+          <h4 class="text-gray-medium uppercase">Technology Attorney</h4>
+          <h2 class="text-primary-blue">Yusuf Jonga, Esq.</h2>
+              <!-- Social Brands -->
+    <div class="mt-3 mb-8 space-x-2">
+      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>        
+      </a>
+      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>        
+      </a>
+      <a class="size-12 bg-primary-gold rounded-xl inline-flex justify-center items-center gap-x-2 text-sm font-semibold border border-transparent text-primary-blue hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-primary-blue">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+        </svg>        
+      </a>
+
+    </div>
+    <!-- End Social Brands -->        
+          <p class="w-full md:w-[80%] text-gray-medium">
+            Yusuf Jonga is a seasoned lawyer and Senior Associate IV at Outsource Global, with a passion for navigating the intersection of law and technology. Specializing in Communications and Information Technology Law, Data Privacy, Security, and Emerging Technologies, he brings a forward-thinking approach to legal challenges in the digital age.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <!-- Right -->
+        <div class="w-full md:w-[40%] flex justify-center">
+            <!-- Image Grid -->
+            <div class="grid grid-cols-2 gap-4">
+              <img
+                src="https://images.credly.com/size/340x340/images/51526f76-711b-4caf-b04d-27f89512b112/NetworkDefense_v1_091721.png"
+                alt="Lawyer"
+                class="relative w-[150px] h-[150px] object-cover"
+              />            
+              <img
+              src="https://images.credly.com/images/0ca5f542-fb5e-4a22-9b7a-c1a1ce4c3db7/EndpointSecurity.png"
+              alt="Lawyer"
+              class="relative w-[150px] h-[150px] object-cover"
+            />                        
+             <img
+            src="https://images.credly.com/size/340x340/images/5d5ac32b-d239-42b8-9665-8a921dc3ab47/image.png"
+            alt="Lawyer"
+            class="relative w-[150px] h-[150px] object-cover"
+          />            
+          <img
+          src="https://images.credly.com/size/340x340/images/fce226c2-0f13-4e17-b60c-24fa6ffd88cb/Intro2IoT.png"
+          alt="Lawyer"
+          class="relative w-[150px] h-[150px] object-cover"
+        />   
+            </div>
+            <!-- End Image Grid -->
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="max-w-screen-xl px-4 py-10 sm:px-6 lg:px-8 lg:py-40 mx-auto">
+    <!-- Title -->
+    <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
+      <h2
+        class="text-3xl lg:text-4xl text-gray-800 font-bold dark:text-neutral-200"
+      >
+      Tailored Tech Law Solutions
+      </h2>
+      <p class="mt-3 text-gray-800 dark:text-neutral-200">
+        The powerful and flexible theme for all kinds of businesses.
+      </p>
+    </div>
+    <!-- End Title -->
+
+    <!-- Grid -->
+    <div
+      class="mt-10 sm:mt-20 grid grid-cols-2 md:grid-cols-3 items-center gap-2 sm:gap-6 lg:gap-18"
+    >
+      {Services.map((serv) => <ServiceBlurb item={serv} />)};
+    </div>
+    <!-- End Grid -->
+  </section>
+
+  <!-- Schedule Call -->
+  <section
+    class="relative px-4 sm:px-6 lg:px-8 py-10 w-full bg-[url('https://img.freepik.com/premium-photo/low-key-filter-law-bookshelf-with-wooden-judge-s-gavel-golden-scale-3d-rendering_34259-444.jpg?w=1060')] bg-no-repeat bg-cover bg-center text-center"
   >
-    Outline
-  </button>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-blue-600 hover:bg-blue-100 hover:text-blue-800 focus:outline-hidden focus:bg-blue-100 focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:bg-blue-800/30 dark:hover:text-blue-400 dark:focus:bg-blue-800/30 dark:focus:text-blue-400"
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-primary-blue opacity-80 z-0"></div>
+
+    <div class="max-w-[85rem] mx-auto">
+      <!-- Grid -->
+      <div
+        class="grid justify-center md:grid-cols-2 md:justify-between md:items-center gap-2 z-1"
+      >
+        <div class="text-center md:text-start z-1">
+          <h4 class="text-white/80 uppercase">Schedule a Call</h4>
+          <h2 class="mt-1 text-white font-medium">
+            Book a Quick Call to Disuss More Today!
+          </h2>
+        </div>
+        <!-- End Col -->
+
+        <div
+          class="mt-3 text-center md:text-start md:flex md:justify-end md:items-center z-1"
+        >
+          <a
+            class="py-2 px-3 md:py-3 md:px-6 inline-flex items-center gap-x-2 text-base font-medium rounded-full border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+            href="#"
+          >
+            Book Call
+          </a>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+    </div>
+  </section>
+
+  <!-- Shop -->
+  <section class="px-4 sm:px-6 lg:px-8 py-32">
+    <!-- Content Wrapper -->
+    <div class="max-w-screen-xl mx-auto">
+      <!-- Grid container -->
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <!-- Column 1 -->
+        {Shopcards.map((detail) => <ServiceCard item={detail} />)};
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Resource -->
+  <section
+    class="relative md:pt-10 overflow-hidden bg-[url('https://images.unsplash.com/photo-1626072301033-d732bd943b2d?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-center bg-cover bg-no-repeat"
   >
-    Ghost
-  </button>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 focus:outline-hidden focus:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-400 dark:hover:bg-blue-900 dark:focus:bg-blue-900"
-  >
-    Soft
-  </button>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
-  >
-    White
-  </button>
-  <button
-    type="button"
-    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-blue-600 hover:text-blue-800 focus:outline-hidden focus:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:text-blue-400"
-  >
-    Link
-  </button>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gray-light opacity-80 z-0"></div>
+
+    <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
+        <!-- Title -->
+        <div class="text-center">
+          <h3
+            class="text-base font-semibold text-gray-dark uppercase mb-3 dark:text-neutral-500"
+          >
+            Downoad free step by step guide
+          </h3>
+          <h1
+            class="text-3xl text-gray-dark font-bold sm:text-5xl lg:text-5xl lg:leading-tight dark:text-neutral-800"
+          >
+            Tech Law Essentials<br />
+            <span class="text-primary-gold"> Every Business Needs</span><br />to
+            protect your digital ventures.
+          </h1>
+        </div>
+        <!-- End Title -->
+
+        <!-- Form -->
+        <form>
+          <div
+            class="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 bg-white border border-gray-200 rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20"
+          >
+            <div class="pt-2 sm:pt-0 sm:ps-3 w-full dark:border-neutral-700">
+              <label
+                for="hs-hero-email-1"
+                class="block text-sm font-medium dark:text-white"
+                ><span class="sr-only">Your email address</span></label
+              >
+              <input
+                type="email"
+                id="hs-hero-email-1"
+                class="py-2.5 sm:py-3 px-4 block w-full border-transparent rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                placeholder="Your email address"
+              />
+            </div>
+            <div class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block">
+              <a
+                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                href="#"
+              >
+                Get started
+              </a>
+            </div>
+          </div>
+        </form>
+        <!-- End Form -->
+
+        <!-- SVG Element -->
+        <div
+          class="hidden absolute top-2/4 start-0 transform -translate-y-2/4 -translate-x-40 md:block"
+          aria-hidden="true"
+        >
+  <img src={columnOne.src} class="animate-float" alt="greek-pillar-base" />
+        </div>
+        <!-- End SVG Element -->
+
+        <!-- SVG Element -->
+        <div
+          class="hidden absolute top-2/4 end-0 transform -translate-y-2/4 translate-x-40 md:block"
+          aria-hidden="true"
+        >
+        <img src={columnTwo.src} class="animate-float" alt="greek-pillar-base" />
+      </div>
+        <!-- End SVG Element -->
+      </div>
+    </div>
+  </section>
+  <!-- End Subscribe -->
+
+  <!-- Blog Section -->
+  <section class="px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <!-- Card Blog -->
+    <div class="max-w-[85rem] mx-auto">
+      <!-- Title -->
+      <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+        <h2
+          class="font-bold text-primary-blue md:leading-tight dark:text-gray-light"
+        >
+          Insights
+        </h2>
+        <p class="mt-1 text-gray-dark dark:text-grey-light">
+          Stay in the know with tech law insights.
+        </p>
+      </div>
+      <!-- End Title -->
+
+      <!-- Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-6">
+        <!-- Card -->
+        <a class="group flex flex-col focus:outline-hidden" href="#">
+          <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+            <img
+              class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+              src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+              alt="Blog Image"
+            />
+            <span
+              class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-primary-gold text-white py-1.5 px-3 dark:bg-neutral-900"
+            >
+              Sponsored
+            </span>
+          </div>
+
+          <div class="mt-7">
+            <h3
+              class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white"
+            >
+              Why Your App Needs a Privacy Policy
+            </h3>
+            <p class="mt-3 text-gray-800 dark:text-neutral-200">
+              Produce professional, reliable streams easily leveraging Preline's
+              innovative broadcast studio
+            </p>
+            <p
+              class="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500"
+            >
+              Read more
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg
+              >
+            </p>
+          </div>
+        </a>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <a class="group flex flex-col focus:outline-hidden" href="#">
+          <div class="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
+            <img
+              class="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
+              src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
+              alt="Blog Image"
+            />
+          </div>
+
+          <div class="mt-7">
+            <h3
+              class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-300 dark:group-hover:text-white"
+            >
+              Influencer Contracts 101 - Your Guide to Rock
+            </h3>
+            <p class="mt-3 text-gray-800 dark:text-neutral-200">
+              Optimize your in-person experience with best-in-class capabilities
+              like badge printing and lead retrieval
+            </p>
+            <p
+              class="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500"
+            >
+              Read more
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg
+              >
+            </p>
+          </div>
+        </a>
+        <!-- End Card -->
+
+        <!-- Card -->
+        <a
+          class="group relative flex flex-col w-full min-h-60 bg-[url('https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80')] bg-center bg-cover rounded-xl hover:shadow-lg focus:outline-hidden focus:shadow-lg transition"
+          href="#"
+        >
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-primary-blue opacity-80 z-0"></div>
+
+          <div class="flex-auto p-4 md:p-6 z-1">
+            <h3 class="text-xl text-white/90 group-hover:text-white">
+              <span class="font-bold">Preline</span> Press publishes books about
+              economic and technological advancement.
+            </h3>
+          </div>
+          <div class="pt-0 p-4 md:p-6 z-1">
+            <div
+              class="inline-flex items-center gap-2 text-sm font-medium text-white group-hover:text-white/70 group-focus:text-white/70"
+            >
+              Visit the site
+              <svg
+                class="shrink-0 size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg
+              >
+            </div>
+          </div>
+        </a>
+        <!-- End Card -->
+      </div>
+      <!-- End Grid -->
+    </div>
+    <!-- End Card Blog -->
+  </section>
 </Layout>
+<style>
+  .border-overlay {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 8px solid var(--color-primary-gold);
+    border-left: 8px solid var(--color-primary-gold);
+    border-right: 8px solid var(--color-primary-gold);
+    z-index: 30; /* In front of image */
+    background: transparent;
+  }
+
+ /* Shiny line overlay effect */
+.border-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(0deg);
+  animation: shine 2.5s infinite ease-in-out;
+  z-index: 20;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(25deg);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(200%) translateY(200%) rotate(25deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.02) translateY(-5px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+</style>
